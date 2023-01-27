@@ -1,1 +1,1 @@
-# what-s-on-the-agenda
+# whats-on-the-agenda
