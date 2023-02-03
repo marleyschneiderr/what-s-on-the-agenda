@@ -33,6 +33,15 @@ for(var i = 0; i < 24; i++) {
     if (savedValue) {
       textCalendar.text(savedValue);
     }
+
+    var currentHour = dayjs().hour();
+    if (i < currentHour) {
+      textCalendar.parent().addClass("past");
+    } else if (i > currentHour) {
+      textCalendar.parent().addClass("future");
+    } else {
+      textCalendar.parent().addClass("present");
+    }
   };
 
   // TODO: Add code to apply the past, present, or future class to each time
