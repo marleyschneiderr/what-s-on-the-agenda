@@ -67,21 +67,19 @@ for(var i = 0; i < 24; i++) {
 
       if (blockHour < currentHour) {
         $(this).addClass("past");
+      } else if (blockHour === currentHour) {
+          $(this).removeClass("past");
+          $(this).addClass("present");
+      } else {
+          $(this).removeClass("past");
+          $(this).removeClass("present");
+          $(this).addClass("future");
       }
-
-      if (blockHour === currentHour) {
-        $(this).addClass("present");
-      }
-
-      if (blockHour > currentHour) {
-        $(this).addClass("future");
-      }
-
-      
     });
-   };
-
-   hourUpdater();
+  }
+ 
+    hourUpdater();
+      
 
 // TODO: Add code to get any user input that was saved in localStorage and set the values of the corresponding textarea elements
 $("#1-hour .description").val(localStorage.getItem("1-hour"));
