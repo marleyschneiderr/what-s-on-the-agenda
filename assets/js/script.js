@@ -56,27 +56,27 @@ for(var i = 0; i < 24; i++) {
     // i+"#-hour".parent().addClass("present");
    // };
 
-   function hourUpdater() {
-    // getting the number of hours
-    var currentHour = dayjs().hour();
-    console.log(currentHour);
+ function hourUpdater() {
+  // getting the number of hours
+  var currentHour = dayjs().hour();
+  console.log(currentHour);
 
-    $(".time-block").each(function () {
-      var blockHour = parseInt($(this).attr("id").split("-")[0]);
-      console.log(blockHour);
+  $(".time-block").each(function () {
+    var blockHour = parseInt($(this).attr("id").split("-")[0]);
+    console.log(blockHour);
 
-      if (blockHour < currentHour) {
-        $(this).addClass("past");
-      } else if (blockHour === currentHour) {
-          $(this).removeClass("past");
-          $(this).addClass("present");
-      } else {
-          $(this).removeClass("past");
-          $(this).removeClass("present");
-          $(this).addClass("future");
-      }
-    });
-  }
+    if (blockHour < currentHour) {
+      $(this).addClass("past");
+    } else if (blockHour === currentHour) {
+        $(this).removeClass("past");
+        $(this).addClass("present");
+    } else {
+        $(this).removeClass("past");
+        $(this).removeClass("present");
+        $(this).addClass("future");
+    }
+  });
+}
  
     hourUpdater();
       
