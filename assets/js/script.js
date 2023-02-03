@@ -2,11 +2,16 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
+//displaying today's date at the top of the page that updates everyday 
+var date = dayjs().format('YYYY-MM-DD');
+$("#TodaysDate").text("Today is: " + date);
+
+
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
   $(".saveBtn").on("click", function(){
     var timeCalendar = $(this).siblings(".description").val();
-    var textCalendar = = $(this).parent().attr("id");
+    var textCalendar = $(this).parent().attr("id");
 
 });
 
