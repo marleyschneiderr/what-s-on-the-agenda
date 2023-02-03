@@ -46,15 +46,42 @@ for(var i = 0; i < 24; i++) {
    // };
   // }
 
-   var currentHour = "10"
-   console.log("current hour is: " + currentHour)
-   if (this.id < currentHour) {
-     i+"#-hour".parent().addClass("past");
-   } else if (this.id > currentHour) {
-    i+"#-hour".parent().addClass("future");
-   } else if (this.id === currentHour) {
-    i+"#-hour".parent().addClass("present");
+   // var currentHour = "10"
+   // console.log("current hour is: " + currentHour)
+   // if (this.id < currentHour) {
+   // i+"#-hour".parent().addClass("past");
+   // } else if (this.id > currentHour) {
+   // i+"#-hour".parent().addClass("future");
+   // } else if (this.id === currentHour) {
+    // i+"#-hour".parent().addClass("present");
+   // };
+
+   function hourUpdater() {
+    // getting the number of hours
+    var currentHour = dayjs().hour();
+    console.log(currentHour);
+
+    $(".time-block").each(function () {
+      var blockHour = parseInt($(this).attr("id").split("-")[0]);
+      console.log(blockHour);
+
+      if (blockHour < currentHour) {
+        $(this).addClass("past");
+      }
+
+      if (blockHour === currentHour) {
+        $(this).addClass("present");
+      }
+
+      if (blockHour > currentHour) {
+        $(this).addClass("future");
+      }
+
+      
+    });
    };
+
+   hourUpdater();
 
 // TODO: Add code to get any user input that was saved in localStorage and set the values of the corresponding textarea elements
 $("#1-hour .description").val(localStorage.getItem("1-hour"));
