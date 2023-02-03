@@ -1,12 +1,34 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
   $(".saveBtn").on("click", function(){
-    var
+    var timeCalendar = $(this).siblings(".description").val();
+    var textCalendar = = $(this).parent().attr("id");
 
 });
+
+// storing time-block information for each hour in local storage 
+localStorage.setItem(textCalendar, timeCalendar);
+
+});
+
+// getting the data from the local storage by hour and making it show up on the actual calendar
+for(var i = 0; i < 24; i++) {
+  var id = "#" + i;
+    var textCalendar = $(id).children(".description").val();
+    var date = dayjs().format('YYYY-MM-DD');
+    var key = date + "-" + i;
+    var savedValue = localStorage.getItem(key);
+    
+    if (savedValue) {
+      textCalendar.text(savedValue);
+    }
+  };
+
+
   
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
