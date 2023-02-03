@@ -24,7 +24,7 @@ Created by Marley Schneider, Github: https://github.com/marleyschneiderr
 
 This website was designed to serve as a organizer for a busy work day. This quiz is available for all people who would like to organize their workday and life around it.
 
-![Screenshot of Full Webpage](assets/images/quiz-pic.png)
+![Screenshot of Full Webpage](assets/images/work-day.png)
 
 ## Credits
 
