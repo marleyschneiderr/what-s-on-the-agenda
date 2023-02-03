@@ -10,7 +10,7 @@ An application that anyone can use to manage their workday schedule.
 
 ## Link to Live WebPage
 
-https://marleyschneiderr.github.io/quiz-master-marley/
+
 
 ## Installation
 
@@ -22,13 +22,15 @@ Created by Marley Schneider, Github: https://github.com/marleyschneiderr
 
 ## Usage
 
-This website was designed to serve as a quiz for a user who is currently learning javascript. This quiz is available for students and teachers who want to test or refresh their knowledge on javascript.
+This website was designed to serve as a organizer for a busy work day. This quiz is available for all people who would like to organize their workday and life around it.
 
 ![Screenshot of Full Webpage](assets/images/quiz-pic.png)
 
 ## Credits
 
 Created by Marley Schneider
+
+Starter Code is from EDX Bootcamps, originating from the University of Washington full stack coding bootcamp.
 
 ## License
 
