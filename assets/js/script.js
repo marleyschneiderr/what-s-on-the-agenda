@@ -13,12 +13,13 @@ $(function () {
     var timeCalendar = $(this).siblings(".description").val();
     var textCalendar = $(this).parent().attr("id");
 
-});
 
 // storing time-block information for each hour in local storage 
 localStorage.setItem(textCalendar, timeCalendar);
 
 });
+});
+
 
 // getting the data from the local storage by hour and making it show up on the actual calendar
 for(var i = 0; i < 24; i++) {
