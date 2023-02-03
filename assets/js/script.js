@@ -31,19 +31,19 @@ for(var i = 0; i < 24; i++) {
     var savedValue = localStorage.getItem(key);
     
     if (savedValue) {
-      $(id).children(".description").text(savedValue);
-    }
-
-    var currentHour = dayjs().hour();
-    if (i < currentHour) {
-      textCalendar.parent().addClass("past");
-    } else if (i > currentHour) {
-      textCalendar.parent().addClass("future");
-    } else {
-      textCalendar.parent().addClass("present");
+      $(id).children(".description").val(savedValue);
     }
   };
 
+  var currentHour = "10"
+  console.log("current hour is: " + currentHour)
+  if (this.id < currentHour) {
+    textCalendar.parent().addClass("past");
+  } else if (this.id > currentHour) {
+    textCalendar.parent().addClass("future");
+  } else if (this.id === currentHour) {
+    textCalendar.parent().addClass("present");
+  };
 
 // TODO: Add code to get any user input that was saved in localStorage and set the values of the corresponding textarea elements
 $("#1-hour .description").val(localStorage.getItem("1-hour"));
@@ -70,7 +70,6 @@ $("#21-hour .description").val(localStorage.getItem("21-hour"));
 $("#22-hour .description").val(localStorage.getItem("22-hour"));
 $("#23-hour .description").val(localStorage.getItem("23-hour"));
 $("#24-hour .description").val(localStorage.getItem("24-hour"));
-
 
 // });
 
