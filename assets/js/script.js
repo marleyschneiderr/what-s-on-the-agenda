@@ -9,7 +9,8 @@ $("#TodaysDate").text("Today is: " + date);
 
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
-  $(".saveBtn").on("click", function(){
+  $(".saveBtn").on("click", function(event){
+  event.preventDefault();
     var timeCalendar = $(this).siblings(".description").val();
     var textCalendar = $(this).parent().attr("id");
 
