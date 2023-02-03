@@ -35,15 +35,26 @@ for(var i = 0; i < 24; i++) {
     }
   };
 
-  var currentHour = "10"
-  console.log("current hour is: " + currentHour)
-  if (this.id < currentHour) {
-    textCalendar.parent().addClass("past");
-  } else if (this.id > currentHour) {
-    textCalendar.parent().addClass("future");
-  } else if (this.id === currentHour) {
-    textCalendar.parent().addClass("present");
-  };
+  // var currentHour = parseInt(hour);
+  // for (var i = 5; i <= 24; i++) {
+   // if ( currentHour < i ) {
+   //   $(i+"#-hour").addClass('future'); 
+   // } else if ( currentHour === i ) {
+   //   $(i+"#-hour").addClass('present');
+   // } else {
+   //   $(i+"#-hour").addClass('past');
+   // };
+  // }
+
+   var currentHour = "10"
+   console.log("current hour is: " + currentHour)
+   if (this.id < currentHour) {
+     i+"#-hour".parent().addClass("past");
+   } else if (this.id > currentHour) {
+    i+"#-hour".parent().addClass("future");
+   } else if (this.id === currentHour) {
+    i+"#-hour".parent().addClass("present");
+   };
 
 // TODO: Add code to get any user input that was saved in localStorage and set the values of the corresponding textarea elements
 $("#1-hour .description").val(localStorage.getItem("1-hour"));
