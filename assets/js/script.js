@@ -21,7 +21,7 @@ localStorage.setItem(textCalendar, timeCalendar);
 });
 });
 
-
+// Add code to apply the past, present, or future class to each time block by comparing the id to the current hour
 // getting the data from the local storage by hour and making it show up on the actual calendar
 for(var i = 0; i < 24; i++) {
   var id = "#" + i;
@@ -44,16 +44,8 @@ for(var i = 0; i < 24; i++) {
     }
   };
 
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-  //
 
-
-// TODO: Add code to get any user input that was saved in localStorage and set the values of the corresponding textarea elements. HINT: How can the id attribute of each time-block be used to do this?
-// getting all the data that was stored in local storage, returns the string that matches in html 
+// TODO: Add code to get any user input that was saved in localStorage and set the values of the corresponding textarea elements
 $("#1-hour.description").val(localStorage.getItem("1-hour"));
 $("#2-hour.description").val(localStorage.getItem("2-hour"));
 $("#3-hour.description").val(localStorage.getItem("3-hour"));
@@ -79,7 +71,6 @@ $("#22-hour.description").val(localStorage.getItem("22-hour"));
 $("#23-hour.description").val(localStorage.getItem("23-hour"));
 $("#24-hour.description").val(localStorage.getItem("24-hour"));
 
-// TODO: Add code to display the current date in the header of the page.
 
 // });
 
